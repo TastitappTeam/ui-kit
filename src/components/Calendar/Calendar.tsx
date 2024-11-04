@@ -20,10 +20,15 @@ function Calendar({
     onNextClick,
     previousMonth,
     nextMonth,
-  }: any) => (
+  }: {
+    onPreviousClick?: React.MouseEventHandler<HTMLButtonElement>;
+    onNextClick?: React.MouseEventHandler<HTMLButtonElement>;
+    previousMonth?: Date;
+    nextMonth?: Date;
+  }) => (
     <div className="space-x-1 flex items-center relative">
       <button
-        onClick={() => onPreviousClick()}
+        onClick={(event) => onPreviousClick && onPreviousClick(event)}
         disabled={!previousMonth}
         className={cn(
           buttonVariants({ variant: 'outline' }),
@@ -33,7 +38,7 @@ function Calendar({
         <ChevronLeft className="h-4 w-4" />
       </button>
       <button
-        onClick={() => onNextClick()}
+        onClick={(event) => onNextClick && onNextClick(event)}
         disabled={!nextMonth}
         className={cn(
           buttonVariants({ variant: 'outline' }),
