@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { CalendarIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 import { Popover, PopoverContent, PopoverTrigger } from './Popover';
-import { Button, Calendar, Input } from '@/components';
+import { Button, Calendar, Input } from '../../components';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
