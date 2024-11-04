@@ -4,20 +4,23 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '../../lib/utils';
 
-const textareaVariants = cva('block w-full rounded-md border-0', {
-  variants: {
-    textareaSize: {
-      xs: 'px-2 py-1 text-xs',
-      sm: 'px-2 py-1 text-sm',
-      lg: 'px-2.5 py-1.5 text-sm',
-      xl: 'px-3 py-2 text-sm',
-      '2xl': 'px-3.5 py-2.5',
+const textareaVariants = cva(
+  'block w-full rounded-md border-0 font-AvenirNext',
+  {
+    variants: {
+      textareaSize: {
+        xs: 'px-2 py-1 text-xs',
+        sm: 'px-2 py-1 text-sm',
+        lg: 'px-2.5 py-1.5 text-sm',
+        xl: 'px-3 py-2 text-sm',
+        '2xl': 'px-3.5 py-2.5',
+      },
     },
-  },
-  defaultVariants: {
-    textareaSize: 'xl',
-  },
-});
+    defaultVariants: {
+      textareaSize: 'xl',
+    },
+  }
+);
 
 export interface TextAreaProps
   extends React.InputHTMLAttributes<HTMLTextAreaElement>,
@@ -45,7 +48,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       <div className="w-full">
         <label
           htmlFor="text"
-          className="block text-sm font-medium leading-6 text-gray-900 mb-2"
+          className="block text-sm font-medium font-AvenirNext leading-6 text-gray-900 mb-2"
         >
           {label}
         </label>
@@ -75,12 +78,18 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           {...rest}
         />
         {!isErrored && description && (
-          <p id="email-description" className="mt-2 text-sm text-gray-500">
+          <p
+            id="email-description"
+            className="mt-2 font-AvenirNext text-sm text-gray-500"
+          >
             {description}
           </p>
         )}
         {isErrored && (
-          <p id="email-error" className="mt-2 text-sm text-red-500">
+          <p
+            id="email-error"
+            className="mt-2 font-AvenirNext text-sm text-red-500"
+          >
             {errorMessage}
           </p>
         )}
