@@ -38,7 +38,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
     <div className="w-full">
       <label
         htmlFor="email"
-        className="block text-sm font-medium leading-6 text-gray-900 mb-2"
+        className="block text-sm font-medium font-AvenirNext leading-6 text-gray-900 mb-2"
       >
         {label}
       </label>
@@ -59,12 +59,18 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
         {...rest}
       />
       {!isErrored && description && (
-        <p id="email-description" className="mt-2 text-sm text-gray-500">
+        <p
+          id="email-description"
+          className="mt-2 font-AvenirNext text-sm text-gray-500"
+        >
           {description}
         </p>
       )}
       {isErrored && (
-        <p id="email-error" className="mt-2 text-sm text-red-500">
+        <p
+          id="email-error"
+          className="mt-2 font-AvenirNext text-sm text-red-500"
+        >
           {errorMessage}
         </p>
       )}
