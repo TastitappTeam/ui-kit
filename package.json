@@ -8,7 +8,7 @@
   "main": "src/index.ts",
   "style": "src/global.css",
   "scripts": {
-    "build": "tsc -b && vite build",
+    "build": "tsc",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -39,6 +39,10 @@
     "vite-tsconfig-paths": "^5.0.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-flow": "^7.25.9",
+    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-typescript": "^7.26.0",
     "@chromatic-com/storybook": "^1.9.0",
     "@eslint/js": "^9.13.0",
     "@storybook/addon-essentials": "^8.3.6",
@@ -50,6 +54,7 @@
     "@storybook/react": "^8.3.6",
     "@storybook/react-vite": "^8.3.6",
     "@storybook/test": "^8.3.6",
+    "@testing-library/react": "^16.0.1",
     "@types/jest": "^29.5.14",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
