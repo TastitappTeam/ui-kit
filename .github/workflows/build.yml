@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ["lts/*"]
+        node-version: ['lts/*']
 
     steps:
       - uses: actions/checkout@v4
@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
       - run: npm ci
       - run: npm run build
 
@@ -27,7 +27,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ["lts/*"]
+        node-version: ['lts/*']
 
     steps:
       - uses: actions/checkout@v4
@@ -35,6 +35,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
       - run: npm ci
       - run: npm run build-storybook
