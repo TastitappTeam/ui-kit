@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { RadioGroup, RadioGroupItem } from './RadioGroup';
 
-import { Label } from '@/components'; // Adjust the import path as necessary
+import { Label } from '../../components'; // Adjust the import path as necessary
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
