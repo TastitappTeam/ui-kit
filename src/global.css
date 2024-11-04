@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@layer tailwind-base, tastit-custom-styles;
+@layer tailwind-base {
+  @tailwind base;
+  @tailwind components;
+}
+
+@tailwind utilities;
+
+@layer tastit-custom-styles {
+  /* .default-button {
+    @apply font-Gotham w-full h-12 transition-colors duration-300;
+  } */
+
+  /* .default-primary {
+    @apply bg-c-default text-f-secondary
+          hover:bg-c-hover
+          active:bg-c-pressed
+          disabled:text-f-disabled disabled:bg-c-disabled;
+  } */
+
+  /* .default-secondary {
+    @apply text-f-primary
+          hover:bg-neutral/[.15]
+          active:bg-neutral/[.3]
+          disabled:text-f-disabled disabled:bg-c-disabled disabled:border-c-disabled;
+  }
+
+  .default-danger {
+    @apply text-s-error border-2 border-s-error
+      hover:bg-s-error/[.15]
+      active:bg-s-error/[.3]
+      disabled:text-f-disabled disabled:bg-c-disabled disabled:border-c-disabled;
+  }
+
+  .default-icon {
+    @apply w-10 h-10 text-f-primary
+      hover:bg-tertiary;
+  }
+
+  .default-input {
+    @apply border-b border-c-default outline-0
+          hover:border-c-hover
+          focus:border-c-pressed focus:text-neutral
+          bg-secondary
+          placeholder-c-disabled text-f-disabled;
+  } */
+
+  /* We rely on placeholder to change the border */
+  /* once uncontrolled components not necessary have value property */
+  /* .default-input:not(:placeholder-shown),
+  .default-input:not([value='']) {
+    @apply border-primary text-neutral;
+  } */
+}
+
+/* Avenir Next */
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/Avenir-Next/AvenirNextLTPro-Regular.otf');
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/Avenir-Next/AvenirNextLTPro-Bold.otf');
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/Avenir-Next/AvenirNextLTPro-MediumCnlt.otf');
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
