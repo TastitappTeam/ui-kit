@@ -3,7 +3,8 @@
   "version": "0.0.0-development",
   "type": "module",
   "files": [
-    "src"
+    "src",
+    "presets"
   ],
   "main": "src/index.ts",
   "style": "src/global.css",
@@ -20,7 +21,8 @@
     "fmt:check": "npm run prettier && npm run lint",
     "test": "jest",
     "prepare": "husky",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "chromatic": "npx chromatic --project-token=chpt_6777d2668a8a060"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
@@ -67,6 +69,7 @@
     "@types/testing-library__jest-dom": "^5.14.9",
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
+    "chromatic": "^11.16.5",
     "eslint": "^9.13.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.13",
