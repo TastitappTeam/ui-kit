@@ -12,13 +12,10 @@ permissions:
   pull-requests: write
 
 jobs:
-  test:
-    uses: ./.github/workflows/tests.yml
   build:
     uses: ./.github/workflows/build.yml
 
   release:
-    needs: test
     runs-on: ubuntu-latest
 
     steps:

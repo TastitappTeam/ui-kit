@@ -10,3 +10,5 @@ public
 *.mdx
 package-lock.json
 *.yml
+.next
+.cache

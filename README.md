@@ -2,7 +2,7 @@
 
 Tech:
 
-- Vite typescript
+- Next typescript
 - tailwind
 
 ## How to use it?

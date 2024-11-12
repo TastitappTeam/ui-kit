@@ -1,3 +1,5 @@
+'use client';
+
 import { forwardRef } from 'react';
 
 import { toast as _toast, ToastBar, Toaster } from 'react-hot-toast';
