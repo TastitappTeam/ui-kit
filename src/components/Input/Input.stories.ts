@@ -24,5 +24,27 @@ export const Default: Story = {
     label: 'E-mail',
     description: 'We will never share your email with anyone else.',
     inputSize: 'lg',
+    className: 'w-96',
+  },
+};
+
+export const WithError: Story = {
+  args: {
+    ...Default.args,
+    errorMessage: 'This field is required.',
+  },
+};
+
+export const WithoutLabel: Story = {
+  args: {
+    ...Default.args,
+    label: undefined,
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: undefined,
   },
 };
