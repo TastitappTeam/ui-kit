@@ -24,5 +24,27 @@ export const Default: Story = {
     label: 'Description',
     description: 'A description of the thing you are describing',
     textareaSize: 'xl',
+    className: 'w-96',
+  },
+};
+
+export const WithError: Story = {
+  args: {
+    ...Default.args,
+    errorMessage: 'This field is required.',
+  },
+};
+
+export const WithoutLabel: Story = {
+  args: {
+    ...Default.args,
+    label: undefined,
+  },
+};
+
+export const WithoutDescription: Story = {
+  args: {
+    ...Default.args,
+    description: undefined,
   },
 };
