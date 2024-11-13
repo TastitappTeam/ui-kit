@@ -22,7 +22,7 @@ const inputVariants = cva('block w-full rounded-md border-0', {
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
     VariantProps<typeof inputVariants> {
-  label: string;
+  label?: string;
   description?: string;
   errorMessage?: string;
   inputSize?: 'xs' | 'sm' | 'lg' | 'xl' | '2xl';
@@ -36,12 +36,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
 
   return (
     <div className="w-full">
-      <label
-        htmlFor="email"
-        className="block text-sm font-medium font-AvenirNext leading-6 text-gray-900 mb-2"
-      >
-        {label}
-      </label>
+      {label && (
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium font-AvenirNext leading-6 text-gray-900 mb-2"
+        >
+          {label}
+        </label>
+      )}
       <input
         ref={ref}
         id="email"

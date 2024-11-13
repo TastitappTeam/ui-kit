@@ -25,7 +25,7 @@ const textareaVariants = cva(
 export interface TextAreaProps
   extends React.InputHTMLAttributes<HTMLTextAreaElement>,
     VariantProps<typeof textareaVariants> {
-  label: string;
+  label?: string;
   description?: string;
   errorMessage?: string;
   textareaSize?: 'xs' | 'sm' | 'lg' | 'xl' | '2xl';
@@ -46,12 +46,14 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
     return (
       <div className="w-full">
-        <label
-          htmlFor="text"
-          className="block text-sm font-medium font-AvenirNext leading-6 text-gray-900 mb-2"
-        >
-          {label}
-        </label>
+        {label && (
+          <label
+            htmlFor="text"
+            className="block text-sm font-medium font-AvenirNext leading-6 text-gray-900 mb-2"
+          >
+            {label}
+          </label>
+        )}
         <textarea
           ref={ref}
           id="textarea"
