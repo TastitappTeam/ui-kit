@@ -3,6 +3,7 @@ export * from './Button';
 export * from './Calendar';
 export * from './Checkbox';
 export * from './Dialog';
+export * from './DropZone';
 export * from './Input';
 export * from './Label';
 export * from './Popover';
