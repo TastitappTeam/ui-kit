@@ -4,6 +4,7 @@ export * from './Calendar';
 export * from './Carousel';
 export * from './Checkbox';
 export * from './Dialog';
+export * from './DropdownMenu';
 export * from './DropZone';
 export * from './Input';
 export * from './Label';
