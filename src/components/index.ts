@@ -2,6 +2,7 @@ export * from './Badge';
 export * from './Button';
 export * from './Calendar';
 export * from './Carousel';
+export * from './Chart';
 export * from './Checkbox';
 export * from './Dialog';
 export * from './DropdownMenu';
