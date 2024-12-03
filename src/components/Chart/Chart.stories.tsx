@@ -1,6 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Bar, BarChart, CartesianGrid, XAxis, Line, LineChart } from 'recharts';
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  AreaChart,
+  XAxis,
+  Line,
+  LineChart,
+  Area,
+} from 'recharts';
+
 import {
   ChartConfig,
   ChartContainer,
@@ -26,6 +36,7 @@ const lineChartData = [
   { month: 'April', desktop: 73 },
   { month: 'May', desktop: 209 },
   { month: 'June', desktop: 214 },
+  { month: 'July' },
 ];
 
 const chartConfig = {
@@ -118,6 +129,43 @@ export const LineStory: Story = {
           dot={false}
         />
       </LineChart>
+    ),
+  },
+};
+
+export const AreaStory: Story = {
+  args: {
+    config: chartConfig,
+    className: 'min-h-[200px] w-full',
+    children: (
+      <AreaChart
+        accessibilityLayer
+        data={lineChartData}
+        margin={{
+          left: 12,
+          right: 12,
+        }}
+      >
+        <CartesianGrid vertical={false} />
+        <XAxis
+          dataKey="month"
+          tickLine={false}
+          axisLine={false}
+          tickMargin={8}
+          tickFormatter={(value) => value.slice(0, 3)}
+        />
+        <ChartTooltip
+          cursor={false}
+          content={<ChartTooltipContent indicator="line" />}
+        />
+        <Area
+          dataKey="desktop"
+          type="natural"
+          fill="#FA7268"
+          fillOpacity={0.4}
+          stroke="#FA7268"
+        />
+      </AreaChart>
     ),
   },
 };
