@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
+    "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-dropdown-menu": "^2.1.2",
@@ -53,6 +54,7 @@
     "recharts": "^2.13.3",
     "remark-gfm": "^4.0.0",
     "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
     "tw-colors": "^3.3.2"
   },
   "devDependencies": {
