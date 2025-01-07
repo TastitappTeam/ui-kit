@@ -23,3 +23,10 @@ export const Default: Story = {
     selected: date,
   },
 };
+
+export const Range: Story = {
+  args: {
+    mode: 'range',
+    className: 'rounded-md border',
+  },
+};
