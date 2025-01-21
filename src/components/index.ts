@@ -7,6 +7,7 @@ export * from './Carousel';
 export * from './Chart';
 export * from './Checkbox';
 export * from './Dialog';
+export * from './Drawer';
 export * from './DropdownMenu';
 export * from './DropZone';
 export * from './Input';
