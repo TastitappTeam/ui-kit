@@ -87,7 +87,7 @@ function Calendar({
         range_start: '!rounded-r-none rounded-l-md',
         range_end: '!rounded-l-none rounded-r-md',
         selected:
-          'bg-brand text-white hover:bg-brand hover:text-white focus:bg-brand focus:text-white rounded-md',
+          'bg-brand text-white hover:bg-brand hover:text-white focus:bg-brand focus:text-white !rounded-md',
         today: 'bg-gray-100 aria-selected:bg-brand !rounded-md',
         outside:
           'text-gray-500 opacity-50 aria-selected:bg-brand/50 aria-selected:text-green-400 aria-selected:opacity-30 rounded-md',
