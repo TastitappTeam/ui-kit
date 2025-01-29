@@ -28,7 +28,7 @@ function Calendar({
     previousMonth?: Date;
     nextMonth?: Date;
   }) => (
-    <div className="space-x-1 flex items-center relative">
+    <div className="space-x-1 flex items-center w-full absolute">
       <button
         onClick={(event) => onPreviousClick && onPreviousClick(event)}
         disabled={!previousMonth}
@@ -60,11 +60,12 @@ function Calendar({
       showOutsideDays={showOutsideDays}
       className={cn('p-3', className)}
       classNames={{
-        months: 'flex flex-col space-y-4 sm:space-x-0 sm:space-y-0 w-fit',
+        months:
+          'flex flex-col sm:flex-row space-y-4 sm:gap-4 sm:space-y-0 w-fit relative',
         month: 'space-y-4',
         month_caption: 'flex justify-center pt-1 relative items-center',
-        caption_label: 'text-sm font-medium',
-        nav: 'space-x-1 flex items-center h-fit',
+        caption_label: 'text-sm font-medium capitalize',
+        // nav: 'space-x-1 flex items-center h-fit',
         month_grid: 'w-full border-collapse space-y-1',
         weekdays: 'flex',
         weekday: 'text-gray-300 rounded-md w-9 font-normal text-[0.8rem]',
@@ -90,7 +91,7 @@ function Calendar({
           'bg-brand text-white hover:bg-brand hover:text-white focus:bg-brand focus:text-white !rounded-md',
         today: 'bg-gray-100 aria-selected:bg-brand !rounded-md',
         outside:
-          'text-gray-500 opacity-50 aria-selected:bg-brand/50 aria-selected:text-green-400 aria-selected:opacity-30 rounded-md',
+          'text-gray-500 opacity-50 aria-selected:bg-brand/50 aria-selected:text-gray-500 aria-selected:opacity-30 rounded-md',
         disabled: 'text-muted-foreground opacity-50',
         range_middle:
           '!bg-brand/50 aria-selected:text-white aria-selected:!rounded-none !rounded-none',
