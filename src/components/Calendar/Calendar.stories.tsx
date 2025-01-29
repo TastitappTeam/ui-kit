@@ -27,6 +27,7 @@ export const Default: Story = {
 export const Range: Story = {
   args: {
     mode: 'range',
+    numberOfMonths: 2,
     className: 'rounded-md border',
   },
 };
