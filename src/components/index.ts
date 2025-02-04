@@ -6,6 +6,7 @@ export * from './Card';
 export * from './Carousel';
 export * from './Chart';
 export * from './Checkbox';
+export * from './ContextMenu';
 export * from './Dialog';
 export * from './Drawer';
 export * from './DropdownMenu';
