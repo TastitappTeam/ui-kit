@@ -18,6 +18,7 @@ export * from './RadioGroup';
 export * from './ScrollArea';
 export * from './Select';
 export * from './Separator';
+export * from './Sheet';
 export * from './Stepper';
 export * from './Switch';
 export * from './Table';
