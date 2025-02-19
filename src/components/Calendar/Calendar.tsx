@@ -1,5 +1,6 @@
 'use client';
 
+import 'react-day-picker/dist/style.css';
 import * as React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { DayPicker } from 'react-day-picker';
@@ -27,7 +28,7 @@ function Calendar({
     previousMonth?: Date;
     nextMonth?: Date;
   }) => (
-    <div className="space-x-1 flex items-center relative">
+    <div className="space-x-1 flex items-center w-full absolute">
       <button
         onClick={(event) => onPreviousClick && onPreviousClick(event)}
         disabled={!previousMonth}
@@ -59,28 +60,41 @@ function Calendar({
       showOutsideDays={showOutsideDays}
       className={cn('p-3', className)}
       classNames={{
-        months: 'flex flex-col space-y-4 sm:space-x-0 sm:space-y-0 w-fit',
+        months:
+          'flex flex-col sm:flex-row space-y-4 sm:gap-4 sm:space-y-0 w-fit relative',
         month: 'space-y-4',
         month_caption: 'flex justify-center pt-1 relative items-center',
-        caption_label: 'text-sm font-medium',
-        nav: 'space-x-1 flex items-center h-fit',
+        caption_label: 'text-sm font-medium capitalize',
+        // nav: 'space-x-1 flex items-center h-fit',
         month_grid: 'w-full border-collapse space-y-1',
         weekdays: 'flex',
-        weekday: 'text-gray-200 rounded-md w-9 font-normal text-[0.8rem]',
+        weekday: 'text-gray-300 rounded-md w-9 font-normal text-[0.8rem]',
         week: 'flex w-full mt-2',
-        // cell: 'h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20',
+        // cell: 'h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-brand/50 [&:has([aria-selected])]:bg-brand first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20',
+        // day: cn(
+        //   'h-9 w-9 text-center text-sm p-0 relative [&:[aria-selected].range-end)]:rounded-r-md [&:has([aria-selected].outside)]:bg-brand/50 [&:has([aria-selected])]:bg-brand first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20',
+        //   buttonVariants({ variant: 'ghost' }),
+        //   // 'aria-selected:opacity-100'
+        //   // 'h-9 w-9 text-center text-sm p-0 aria-selected:opacity-100'
+        // ),
         day: cn(
           buttonVariants({ variant: 'ghost' }),
-          'h-9 w-9 text-center text-sm p-0 relative hover:bg-brand hover:text-white aria-selected:opacity-100 [&:has([aria-selected].range-end)]:rounded-r-md [&:has([aria-selected].outside)]:bg-brand/50 [&:has([aria-selected])]:bg-brand first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20'
+          'h-9 w-9 text-center text-sm p-0 relative rounded-none'
         ),
-        range_end: 'day-range-end',
+        day_button: cn(
+          // buttonVariants({ variant: 'ghost' }),
+          'h-full w-full font-normal hover:bg-brand hover:text-white rounded-md relative'
+        ),
+        range_start: '!rounded-r-none rounded-l-md',
+        range_end: '!rounded-l-none rounded-r-md',
         selected:
-          '!bg-brand text-white hover:bg-brand hover:text-white focus:bg-brand focus:text-white',
-        today: 'bg-gray-100 text-gray-500',
+          'bg-brand text-white hover:bg-brand hover:text-white focus:bg-brand focus:text-white !rounded-md',
+        today: 'bg-gray-100 aria-selected:bg-brand !rounded-md',
         outside:
-          'day-outside text-gray-500 opacity-50 aria-selected:bg-gray-100/50 aria-selected:text-muted-foreground aria-selected:opacity-30',
+          'text-gray-500 opacity-50 aria-selected:bg-brand/50 aria-selected:text-gray-500 aria-selected:opacity-30 rounded-md',
         disabled: 'text-muted-foreground opacity-50',
-        range_middle: 'aria-selected:bg-brand/50 aria-selected:text-white',
+        range_middle:
+          '!bg-brand/50 aria-selected:text-white aria-selected:!rounded-none !rounded-none',
         hidden: 'invisible',
         ...classNames,
       }}
